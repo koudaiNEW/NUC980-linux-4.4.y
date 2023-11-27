@@ -122,6 +122,7 @@ static const int g_i32ParityNum[ePageSize_CNT][eBCH_CNT] = {
 #ifndef CONFIG_MTD_CMDLINE_PARTS
 #ifndef CONFIG_OF
 static struct mtd_partition partitions[] = {
+	/*
 	{
 		.name = "u-boot",
 		.offset = 0,
@@ -138,6 +139,12 @@ static struct mtd_partition partitions[] = {
 		.name = "user",
 		.offset = MTDPART_OFS_APPEND,
 		.size = MTDPART_SIZ_FULL
+	}
+ 	*/
+	{
+		.name = "app",
+		.offset = 0x1600000,
+		.size = 0x6A00000
 	}
 };
 #endif
